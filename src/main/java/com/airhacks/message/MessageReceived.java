@@ -19,4 +19,9 @@ public class MessageReceived {
     public String getMessage(){
         return "Hello";
     }
+    
+    @GET
+    public String getMessage2(){
+        return "Hello2";
+    }
 }
