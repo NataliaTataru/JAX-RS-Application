@@ -7,6 +7,7 @@ package com.airhacks.message;
 
 import com.airhacks.chatREST.ChatLine;
 import com.google.gson.Gson;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.Consumes;
@@ -84,10 +85,10 @@ public class MessageReceived {
 //
 //        //Oferta 2 -- Decrease loan amoun
 //        ArrayList<Double> newOffer2 = checkEMIForMaxAcceptableVal(P, finalNoMonths, r, V / 3);
-        messageOffer = "Avand in vedere situatia dumneavoastra financiara, va permiteti urmatoarele valori maxime pentru credit: "+ System.lineSeparator() + "1. Pe "
-                + "o perioada de 6 luni cu o rata de " + A + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + P + " RON." + System.lineSeparator()
-                + "2. Pe o perioada de 1 an cu o rata de " + A + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + P2 + " RON." + System.lineSeparator()
-                + "3. Pe o perioada de 2 ani cu o rata de " + A + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + P3 + " RON.";
+        messageOffer = "Avand in vedere situatia dumneavoastra financiara, va permiteti urmatoarele valori maxime pentru credit: "+ "~1. Pe "
+                + "o perioada de 6 luni cu o rata de " + new DecimalFormat("#.##").format(A) + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + new DecimalFormat("#.##").format(P) + " RON." 
+                + "~2. Pe o perioada de 1 an cu o rata de " + new DecimalFormat("#.##").format(A) + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + new DecimalFormat("#.##").format(P2) + " RON."
+                + "~3. Pe o perioada de 2 ani cu o rata de " + new DecimalFormat("#.##").format(A) + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + new DecimalFormat("#.##").format(P3) + " RON.";
 
         return messageOffer;
     }
@@ -138,10 +139,10 @@ public class MessageReceived {
 //
 //        //Oferta 2 -- Decrease loan amoun
 //        ArrayList<Double> newOffer2 = checkEMIForMaxAcceptableVal(P, finalNoMonths, r, V / 3);
-        messageOffer = "Va propun urmatoarele oferte de credit pentru valoarea venitului dvs lunar de " + venitLunar + " RON:" + System.lineSeparator() + "1. Pe "
-                + "o perioada de 6 luni cu o rata de " + A + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + P + " RON." + System.lineSeparator()
-                + "2. Pe o perioada de 1 an cu o rata de " + A + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + P2 + " RON." + System.lineSeparator()
-                + "3. Pe o perioada de 2 ani cu o rata de " + A + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + P3 + " RON.";
+        messageOffer = "Va propun urmatoarele oferte de credit pentru valoarea venitului dvs lunar de " + venitLunar + " RON:" + "~1. Pe "
+                + "o perioada de 6 luni cu o rata de " + new DecimalFormat("#.##").format(A) + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + new DecimalFormat("#.##").format(P) + " RON."
+                + "~2. Pe o perioada de 1 an cu o rata de " + new DecimalFormat("#.##").format(A) + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + new DecimalFormat("#.##").format(P2) + " RON."
+                + "~3. Pe o perioada de 2 ani cu o rata de " + new DecimalFormat("#.##").format(A) + " RON echivalenta cu o treime din venit si o dobanda lunara de 0.00875%, valoarea maxima pe care o puteti obtine este de " + new DecimalFormat("#.##").format(P3) + " RON.";
 
         return messageOffer;
     }
@@ -198,10 +199,10 @@ public class MessageReceived {
 //
 //        //Oferta 2 -- Decrease loan amoun
 //        ArrayList<Double> newOffer2 = checkEMIForMaxAcceptableVal(P, finalNoMonths, r, V / 3);
-        messageOffer = "Va propun urmatoarele oferte pentru un credit de valoarea " + valueLoan + " RON:" + System.lineSeparator() + "1. Pe "
-                + "o perioada de 6 luni cu o rata de " + A + " RON si o dobanda lunara de 0.00875%, valoarea minima a venitului lunar este de " + V + " RON." + System.lineSeparator()
-                + "2. Pe o perioada de 1 an cu o rata de " + A2 + " RON si o dobanda lunara de 0.00875%, valoarea minima a venitului lunar este de " + V2 + " RON." + System.lineSeparator()
-                + "3. Pe o perioada de 2 ani cu o rata de " + A3 + " RON si o dobanda lunara de 0.00875%, valoarea minima a venitului lunar este de " + V3 + " RON.";
+        messageOffer = "Va propun urmatoarele oferte pentru un credit de valoarea " + valueLoan + " RON:" + "~1. Pe "
+                + "o perioada de 6 luni cu o rata de " + new DecimalFormat("#.##").format(A) + " RON si o dobanda lunara de 0.00875%, valoarea minima a venitului lunar este de " + new DecimalFormat("#.##").format(V) + " RON."
+                + "~2. Pe o perioada de 1 an cu o rata de " + new DecimalFormat("#.##").format(A2) + " RON si o dobanda lunara de 0.00875%, valoarea minima a venitului lunar este de " + new DecimalFormat("#.##").format(V2) + " RON." 
+                + "~3. Pe o perioada de 2 ani cu o rata de " + new DecimalFormat("#.##").format(A3) + " RON si o dobanda lunara de 0.00875%, valoarea minima a venitului lunar este de " + new DecimalFormat("#.##").format(V3) + " RON.";
 
         return messageOffer;
     }
@@ -256,7 +257,7 @@ public class MessageReceived {
 
             System.out.println("SE INCADREAZA");
 
-            messageOffer = "Va propun: O rata lunara de " + A + " pe o durata de " + finalNoMonths + " luni cu o dobanda lunara de 0.875%";
+            messageOffer = "Va propun: O rata lunara de " + new DecimalFormat("#.##").format(A) + " pe o durata de " + finalNoMonths + " luni cu o dobanda lunara de 0.0875%";
         } else {
 
             System.out.println("NU SE INCADREAZA");
@@ -266,8 +267,8 @@ public class MessageReceived {
             //Oferta 2 -- Decrease loan amoun
             ArrayList<Double> newOffer2 = checkEMIForMaxAcceptableVal(P, finalNoMonths, r, V / 3);
 
-            messageOffer = "Nu va incadrati. Rata lunara calculata in valoare de " + A + "RON pe 6 luni depaseste o treime din valoare venitului dumneavoastra lunar. Va propun urmatoarele oferte de credit:" + System.lineSeparator() + "1. Pentru suma pe care ati cerut-o, pe "
-                    + newOffer1.get(1) + " luni cu o rata de " + newOffer1.get(0) + " RON." + System.lineSeparator() + "2. Pentru suma de " + newOffer2.get(1) + " RON pe " + finalNoMonths + " luni cu o rata de " + newOffer2.get(0) + " RON.";
+            messageOffer = "Nu va incadrati. Rata lunara calculata in valoare de " + A + "RON pe 6 luni depaseste o treime din valoare venitului dumneavoastra lunar. Va propun urmatoarele oferte de credit:" + "~1. Pentru suma pe care ati cerut-o, pe "
+                    + newOffer1.get(1) + " luni cu o rata de " + new DecimalFormat("#.##").format(newOffer1.get(0)) + " RON." +  "~2. Pentru suma de " + newOffer2.get(1) + " RON pe " + finalNoMonths + " luni cu o rata de " + new DecimalFormat("#.##").format(newOffer2.get(0)) + " RON.";
 
         }
 
@@ -383,7 +384,7 @@ public class MessageReceived {
 
             System.out.println("SE INCADREAZA");
 
-            messageOffer = "Va propun: O rata lunara de " + A + " pe o durata de " + finalNoMonths + " cu o rata lunara de 2.5%";
+            messageOffer = "Va propun: O rata lunara de " +  new DecimalFormat("#.##").format(A) + " pe o durata de " + finalNoMonths + " cu o rata lunara de 2.5%";
         } else {
             messageOffer = "Nu va incadrati";
         }
